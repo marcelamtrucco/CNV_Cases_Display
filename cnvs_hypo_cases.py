@@ -3,7 +3,7 @@ import pandas as pd
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
-df = pd.read_csv('https://raw.githubusercontent.com/marcelamtrucco/CNV_Cases_Display/main/allgenes-results.txt?token=GHSAT0AAAAAACRMWGUU4GBQPA4RM4LMSFTMZSBPCNA',sep="\t") 
+df = pd.read_csv('https://raw.githubusercontent.com/marcelamtrucco/CNV_Cases_Display/main/allgenes-results.txt?token=GHSAT0AAAAAACRPWSCRTJHUCUAKFEDABO54ZSCN73A',sep="\t") 
 
 app = Dash(__name__)
 
