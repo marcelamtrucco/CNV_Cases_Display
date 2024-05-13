@@ -3,7 +3,7 @@ import pandas as pd
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
-df = pd.read_csv('https://raw.githubusercontent.com/marcelamtrucco/CNV_Cases_Display/main/allgenes-results.txt?token=GHSAT0AAAAAACRMWGUUT7KQO6SD2GJJXYDWZSCPIUA',sep='\t')
+df = pd.read_csv('allgenes-results.txt',sep='\t')
 
 app = Dash(__name__)
 
@@ -45,15 +45,7 @@ def update_styles(selected_columns):
     Input('datatable-interactivity', "derived_virtual_data"),
     Input('datatable-interactivity', "derived_virtual_selected_rows"))
 def update_graphs(rows, derived_virtual_selected_rows):
-    # When the table is first rendered, `derived_virtual_data` and
-    # `derived_virtual_selected_rows` will be `None`. This is due to an
-    # idiosyncrasy in Dash (unsupplied properties are always None and Dash
-    # calls the dependent callbacks when the component is first rendered).
-    # So, if `rows` is `None`, then the component was just rendered
-    # and its value will be the same as the component's dataframe.
-    # Instead of setting `None` in here, you could also set
-    # `derived_virtual_data=df.to_rows('dict')` when you initialize
-    # the component.
+    
     if derived_virtual_selected_rows is None:
         derived_virtual_selected_rows = []
 
