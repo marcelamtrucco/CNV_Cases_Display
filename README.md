@@ -1,2 +1,2 @@
-This repository contains the CNVs archive (Patient_CNVs.csv) found in patients suspected of Hypopituitarism, using the pipeline gatk_case.sh
-It also contains the python script (cnvs_hypo_cases.py) to display a filter table with results in http://127.0.0.1:8050/
+This repository contains the CNVs archive (Patient_CNVs.csv), found by the pipelines: GATK-gCNV-discovery-bash-pipeline and GATK-gCNV-polishing-bash-pipeline, in patients suspected of Hypopituitarism. It also contains the python script (cnvs_hypo_cases.py) to display the results in a filter table on http://127.0.0.1:8050/ .
+To acomplish this, download both files to the same directory and run the script in any Phyton editor like Jupyter notebook/lab, Google Colab, VS Code, etc...
