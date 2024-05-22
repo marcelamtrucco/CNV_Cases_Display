@@ -7,8 +7,7 @@ df = pd.read_csv('allgenes-results.txt',sep='\t')
 
 app = Dash(__name__)
 
-app.layout = html.Div([
-    (html.H1("DataTable with Hypopituitarism Patient CNVs")),
+app.layout = html.Div([(html.H1("DataTable with Hypopituitarism Patient CNVs")),(html.H4("QS= Quality Score  NP =Number of Exons affected")),
     dash_table.DataTable(id='datatable-interactivity',
         columns=[
             {"name": i, "id": i, "deletable": True, "selectable": True} for i in df.columns
