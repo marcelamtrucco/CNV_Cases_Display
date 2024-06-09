@@ -3,7 +3,7 @@ import pandas as pd
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
-df = pd.read_csv('allgenes-results.txt',sep='\t')
+df = pd.read_csv('Patient_CNVs.csv',sep='\t')
 
 app = Dash(__name__)
 server=app.server
