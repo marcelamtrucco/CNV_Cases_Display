@@ -8,7 +8,7 @@ df = pd.read_csv('allgenes-results.txt',sep='\t')
 app = Dash(__name__)
 server=app.server
 
-app.layout = html.Div([(html.H1("DataTable with Hypopituitarism Patient CNVs")),(html.H4("QS= Quality Score  NP =Number of Exons affected")),
+app.layout = html.Div([(html.H1("DataTable with Hypopituitarism Patient CNVs",style={'textAlign': 'center', 'color': 'blue', 'fontSize': 30})),(html.H4("QS= Quality Score  NP =Number of Exons affected")),
     dash_table.DataTable(id='datatable-interactivity',
         columns=[
             {"name": i, "id": i, "deletable": True, "selectable": True} for i in df.columns
@@ -52,4 +52,6 @@ def update_graphs(rows, derived_virtual_selected_rows):
 
 if __name__ == '__main__':
     app.run(debug=True)
-    
+
+
+
