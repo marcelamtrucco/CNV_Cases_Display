@@ -6,6 +6,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 df = pd.read_csv('allgenes-results.txt',sep='\t')
 
 app = Dash(__name__)
+server=app.server
 
 app.layout = html.Div([(html.H1("DataTable with Hypopituitarism Patient CNVs")),(html.H4("QS= Quality Score  NP =Number of Exons affected")),
     dash_table.DataTable(id='datatable-interactivity',
@@ -51,3 +52,4 @@ def update_graphs(rows, derived_virtual_selected_rows):
 
 if __name__ == '__main__':
     app.run(debug=True)
+    
